@@ -248,7 +248,6 @@ dbwebb.assert_equal("1.7", ANSWER, True)
 
 
 
-
 ANSWER = Duration.duration_to_sec(duration1.info())
 
 # I will now test your answer - change false to true to get a hint.
@@ -276,12 +275,11 @@ dbwebb.assert_equal("1.8", ANSWER, False)
 # Write your code below and put the answer into the variable ANSWER.
 #
 
+duration2 = Duration(20, 30, 6)
 
 
 
-
-
-ANSWER = "Replace this text with the variable holding the answer."
+ANSWER = duration1+duration2
 
 # I will now test your answer - change false to true to get a hint.
 dbwebb.assert_equal("2.1", ANSWER, False)

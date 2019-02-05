@@ -40,6 +40,7 @@ class Cat():
         return "{} has {} paws but cats have {} paws.".format(self.get_name, self.nr_of_paws, self.get_nrof_paws)
 
 from datetime import datetime
+import math
 
 class Duration():
 
@@ -51,7 +52,10 @@ class Duration():
     def info(self):
         return '{:02}-{:02}-{:02}'.format(self.hours, self.minutes, self.seconds)
 
-    def duration_to_sec(self, time_to_convert):
+    def duration_to_sec(time_to_convert):
         split_time = time_to_convert.split('-')
         seconds = int(split_time[0]) * 3600 + int(split_time[1]) * 60 + int(split_time[2])
         return seconds
+
+    def __add__(self, other):
+        return '%s plus %s' % (self, other)
